@@ -1,3 +1,6 @@
+- 2019-05-09, meh, Secure Coding: Preventing Insufficient Logging and Monitoring, https://app.pluralsight.com/library/courses/secure-coding-preventing-insufficient-logging-monitoring/table-of-contents
+  - Don't log too much data, but make sure there is enough to catch attackers
+  - A user trying different passwords may just be somebody that forgot their password, but when also trying different user names, then that's a bigger hint to an attacker
 - 2019-05-09, okay, Play by Play: OWASP Top 10 2017, https://app.pluralsight.com/library/courses/play-by-play-owasp-top-ten-2017/table-of-contents
   - OWASP: Open Web Application Security Project
   - A1 - Injection: SQL Injections, NoSQL Injection. We need better frameworks to help prevent this.
