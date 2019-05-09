@@ -1,3 +1,15 @@
+- 2019-05-09, , Play by Play: OWASP Top 10 2017, https://app.pluralsight.com/library/courses/play-by-play-owasp-top-ten-2017/table-of-contents
+ - OWASP: 
+ - A1 - Injection: SQL Injections, NoSQL Injection. We need better frameworks to help prevent this.
+ - A2 - Broken Authentication: There have been many account/password hacks/leaks. We need to get to a place past passwords. Blacklist breached passwords.
+ - A3 - Sensitive Data Exposure: Equifax. The combination of data, like: name, address, phone number, password, 
+ - A4 - XML External Entities (XXE): New frameworks disable this by default. We need more DAST (dynamic scanning) and SAST (source code analysis). 
+ - A5 - Broken Access Control: For example, change a number in the URL to access somebody else's data
+ - A6 - Security Misconfiguration: "Passive-finding", aka without hacking. We need more scripts in CI/CD to auto-test
+ - A7 - Cross-Site Scripting (XSS): Frameworks are helping us more to prevent this
+ - A8 - Insecure Deserialization: Intercepting/changing data going between client and server, aka remote-command execution. Don't blindly run any code that can touched by external.
+ - A9 - Using Components with Known Vulnerabilities: Some dependencies may have vulnerabilities. Need to automatically check NIST for vulnerabilities, and break builds.
+ - A10 - Insufficient Logging & Monitoring: We need more automatic reporting
 - 2019-05-09, good, Play by Play: Modern Web Security Patterns, https://app.pluralsight.com/library/courses/play-by-play-modern-web-security-patterns/table-of-contents
   - With host Troy Hunt, creator of haveibeenpwned.com
   - Case study: A common Javascript library was maliciously updated with a crypto-miner (CoinHive)
