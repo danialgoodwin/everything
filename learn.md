@@ -1,4 +1,6 @@
-- 2019-05-18, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
+- 2019-05-18, meh, Object-Oriented Programmming is Bad, https://www.youtube.com/watch?v=QM1iUe6IofM
+  - Code 'patterns' are a bandage for limitations/weaknesses of a framework/language (common knowledge, this is said by others too)
+- 2019-05-17, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
 - 2019-05-09, meh, Secure Coding: Preventing Insufficient Logging and Monitoring, https://app.pluralsight.com/library/courses/secure-coding-preventing-insufficient-logging-monitoring/table-of-contents
   - Don't log too much data, but make sure there is enough to catch attackers
   - A user trying different passwords may just be somebody that forgot their password, but when also trying different user names, then that's a bigger hint to an attacker
