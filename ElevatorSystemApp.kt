@@ -1,3 +1,4 @@
+// TODO: Add option to keep first floor door open?
 
 object ElevatorSystemApp {
   val repo = ElevatorSystemRepo()
@@ -7,7 +8,7 @@ class ElevatorSystemRepo {
   val elevators = List<Elevator>
 }
 
-data class ElevatorArea(val elevators: List<Elevator>) { }
+data class ElevatorLobby(val elevators: List<Elevator>) { }
 
 data class Elevator(val numberOfDoors: Int = 1) { }
 
