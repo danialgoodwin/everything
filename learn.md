@@ -1,3 +1,7 @@
+- 2019-08-23, , Secure Software Development, https://app.pluralsight.com/library/courses/software-development-secure
+  - SDLC: Software Development Life Cycle
+    - Planning, Requirement Analysis, Design, Implementation, Testing, Maintenance
+  - Each new feature/route opens a new potential attack vector
 - 2019-05-18, meh, Object-Oriented Programmming is Bad, https://www.youtube.com/watch?v=QM1iUe6IofM
   - Code 'patterns' are a bandage for limitations/weaknesses of a framework/language (common knowledge, this is said by others too)
 - 2019-05-17, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
