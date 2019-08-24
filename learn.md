@@ -1,7 +1,18 @@
 - 2019-08-23, , Secure Software Development, https://app.pluralsight.com/library/courses/software-development-secure
   - SDLC: Software Development Life Cycle
-    - Planning, Requirement Analysis, Design, Implementation, Testing, Maintenance
+    - Planning: Input by senior developers, customers, sales
+    - Requirement Analysis: Software, hardware, external (partners), data storage type, data transfer type, how is access granted, how to users use the app
+    - Design: Technical/system design by developers, including risk analysis (internal and external code), security, functional specifications (input type, audit trail)
+    - Implementation: Aka, development phase. Also includes testing in a 'white box' environment (think: unit tests)
+    - Testing: Test in a 'black box' environment, aka as an attacker would see the system.
+    - Deployment: Also check if the deployment mechanism is secure.
+    - Maintenance: Lifecycle is (Monitoring > Updates > Services Packs > Critical Updates > Repeat)
+    - End-of-life: Steps to remove software, don't forget any service accounts. Make sure everything is removed/deleted properly and that no new attack vectors are open once features are removed.
+  - Do we really 'need' a SDLC? Quick rule-of-thumb is if the project involves more than one person
+    - Advantages for using: Easy to learn, easy to use, documentation, clear picture for developers, easier maintenance, better tools, ...
+    - Disadvantages for NOT using: No clear start/stop with tasks, scales poorly, code not flexible, code doesn't match users' needs, easy to skip important tasks
   - Each new feature/route opens a new potential attack vector
+  - Software Development Models: Code-and-Fix (aka, no plan), Waterfall, Agile, Iterative, Spiral
 - 2019-05-18, meh, Object-Oriented Programmming is Bad, https://www.youtube.com/watch?v=QM1iUe6IofM
   - Code 'patterns' are a bandage for limitations/weaknesses of a framework/language (common knowledge, this is said by others too)
 - 2019-05-17, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
