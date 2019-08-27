@@ -22,6 +22,7 @@
     - Input validation: data types, encoding, data range, data length
     - Require authentication for all pages/resources, using standard/well-tested services, faily securely, and many other great notes in the 'Authentication & Password Management' section
   - Code Reviews
+  - Demo: Use OWASP BWA (Broken Web App project), Burp Suite, OWASP ZAP (similar to Burp Suite, intercept network request/responses), 
 - 2019-05-18, meh, Object-Oriented Programmming is Bad, https://www.youtube.com/watch?v=QM1iUe6IofM
   - Code 'patterns' are a bandage for limitations/weaknesses of a framework/language (common knowledge, this is said by others too)
 - 2019-05-17, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
