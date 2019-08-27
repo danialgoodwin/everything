@@ -13,6 +13,15 @@
     - Disadvantages for NOT using: No clear start/stop with tasks, scales poorly, code not flexible, code doesn't match users' needs, easy to skip important tasks
   - Each new feature/route opens a new potential attack vector
   - Software Development Models: Code-and-Fix (aka, no plan), Waterfall, Agile, Iterative, Spiral
+  - Software Vulnerabilities:
+    - OWASP
+    - Input Validation, Buffer Overflow, Command Injection, and much more
+  - Coding Best Practices
+    - We want confidentiality, integrity, availability
+    - Test only on a trusted system
+    - Input validation: data types, encoding, data range, data length
+    - Require authentication for all pages/resources, using standard/well-tested services, faily securely, and many other great notes in the 'Authentication & Password Management' section
+  - Code Reviews
 - 2019-05-18, meh, Object-Oriented Programmming is Bad, https://www.youtube.com/watch?v=QM1iUe6IofM
   - Code 'patterns' are a bandage for limitations/weaknesses of a framework/language (common knowledge, this is said by others too)
 - 2019-05-17, good, Delightful Delegate Design - Márton Braun (Kotlin Budapest meetup 2019-04-11), https://www.youtube.com/watch?v=jTmHNo48zs0
