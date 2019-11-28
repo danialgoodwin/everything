@@ -6,7 +6,8 @@ data Marketplace(
     name: String,
     description: String,
     restrictedProducts: List<String>,
-    defaultConcurrentProducts: Int = 10
+    defaultConcurrentProducts: Int = 10,
+    isIncludeForum: Boolean = true
 )
 
 // Maybe add 2-factor-auth field?
@@ -46,9 +47,10 @@ data ProductPage(
     fun delete()
     fun flag()
     fun review()
+    fun buy()
 }
 
-data Product(seller: User, name: String, description: String, price: Money, images: List<Image>)
+data Product(seller: User, name: String, description: String, price: Money, images: List<Image>, category: String)
 
 data Image(base64: String)
 data Money(amount: Double, currency: Currency)
