@@ -85,4 +85,20 @@ data Message(
     fun kudo() {}
 }
 
+data Plugin()
+data MarketplacePlugin()
+data ForumPlugin()
+data ForumAdsPlugin()
+data UserPlugin()
+
+
+data SignInPage()
+data ProductsPage()
+data ProductPage()
+data PaymentPage()
+data InboxPage()
+data ProfilePage(user: User)
+data SettingsPage()
+data AdminPage()
+data HealthPage()
 
