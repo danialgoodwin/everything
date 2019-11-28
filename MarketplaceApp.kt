@@ -7,7 +7,9 @@ data Marketplace(
     description: String,
     restrictedProducts: List<String>,
     defaultConcurrentProducts: Int = 10,
-    isIncludeForum: Boolean = true
+    isIncludeForum: Boolean = true,
+    isSupportProducts: Boolean = true,
+    isSupportServices: Boolean = false
 )
 
 // Maybe add 2-factor-auth field?
@@ -85,20 +87,26 @@ data Message(
     fun kudo() {}
 }
 
-data Plugin()
-data MarketplacePlugin()
-data ForumPlugin()
-data ForumAdsPlugin()
-data UserPlugin()
+abstract class Plugin()
+class MarketplacePlugin(paymentPlugin: PaymentPlugin) : Plugin()
+class PaymentPlugin() : Plugin()
+class ForumPlugin() : Plugin()
+class ForumAdsPlugin() : Plugin()
+class UserAccountPlugin() : Plugin()
+class UserDirectMessagingPlugin() : Plugin()
 
 
-data SignInPage()
-data ProductsPage()
-data ProductPage()
-data PaymentPage()
-data InboxPage()
-data ProfilePage(user: User)
-data SettingsPage()
-data AdminPage()
-data HealthPage()
+abstract Page()
+class SignInPage() : Page()
+class ProductsPage() : Page()
+class ProductPage() : Page()
+class OrderStatusPage(): Page()
+class PaymentPage() : Page()
+class InboxPage() : Page()
+class ProfilePage(user: User) : Page()
+class SalesPage() : Page()
+class SettingsPage() : Page()
+class AdminPage() : Page()
+class HealthPage() : Page()
+
 
