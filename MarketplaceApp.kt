@@ -1,13 +1,12 @@
-
-class MarketplaceApp {
-
-}
+/**
+ * 
+ */
 
 data Marketplace(
     name: String,
     description: String,
     restrictedProducts: List<String>,
-    defaultNumberOfProducts: Int = 10
+    defaultConcurrentProducts: Int = 10
 )
 
 // Maybe add 2-factor-auth field?
@@ -22,35 +21,62 @@ data User(
     lastSignedInDate: DateTime,
     ignoredUsers: List<User>,
     messages: List<Message>,
+    sellerReviews: List<Review>,
+    buyerReviews: List<Review>
+) {
+    data Email(address: String)   
+}
+
+data Transaction(
+    buyer: User,
+    seller: User,
+    product: Product,
+    quantity: Int,
+    totalPrice: Money,
+    date: DateTime
 )
 
-data Transaction(buyer: User, seller: User, product: Product, quantity: Int, date: DateTime)
+data ProductPage(
+    product: Product,
+    minQuantity: Int,
+    maxQuantity: Int,
+    transactions: List<Transactions> = listOf()
+) {
+    fun edit()
+    fun delete()
+    fun flag()
+    fun review()
+}
 
-data ProductPage(seller: User, product: Product, minQuantity: Int, maxQuantity: Int)
-
-data Product(name: String, description: String, price: Money, images: List<Image>)
-
-data Email(address: String)
+data Product(seller: User, name: String, description: String, price: Money, images: List<Image>)
 
 data Image(base64: String)
+data Money(amount: Double, currency: Currency)
+data Currency(name: String)
+data Review(fromUser: User, forUser: User, value: Int, message: String = "", date: DateTime)
 
 data Forum() {
-    data Section(name: String, description: String, threads: List<Thread>, subSections: List<SubSection>, isAllowSubSections: Boolean) {
-        data SubSection(name: String, description: String, threads: List<Thread>)
+    data Section(name: String, description: String, threads: List<Thread>, subSections: List<Section>, isAllowSubSections: Boolean) {
+        fun newThread(title: String, message: String)
     }
 }
 
-data Inbox(user: User, threads: List<Thread>)
+data Inbox(user: User, threads: List<Thread>) {
+    newThread(toUser: User, title: String = "", message: String)
+}
 
-data Thread(title: String, user: User, isPinned: Boolean, messages: Message)
+data Thread(title: String, user: User, isPinned: Boolean, messages: List<Message> = listOf()) {
+    newMessage(text: String)
+}
 
 data Message(
     user: User,
     text: String,
-    flagUsers: List<User>,
-    kudoUsers: List<User>,
+    flagUsers: List<User> = listOf(),
+    kudoUsers: List<User> = listOf(),
     isDeleted: Boolean = false
 ) {
+    fun reply() {}
     fun edit() {}
     fun delete() {}
     fun flag() {}
