@@ -9,7 +9,9 @@ data Marketplace(
     defaultConcurrentProducts: Int = 10,
     isIncludeForum: Boolean = true,
     isSupportProducts: Boolean = true,
-    isSupportServices: Boolean = false
+    isSupportServices: Boolean = false,
+    isSupportAnySeller: Boolean = true,
+    isPrivate: Boolean = false
 )
 
 // Maybe add 2-factor-auth field?
@@ -98,6 +100,7 @@ class UserDirectMessagingPlugin() : Plugin()
 
 abstract Page()
 class SignInPage() : Page()
+class RegisterPage() : Page()
 class ProductsPage() : Page()
 class ProductPage() : Page()
 class OrderStatusPage(): Page()
