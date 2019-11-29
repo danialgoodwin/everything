@@ -1,4 +1,5 @@
 abstract class View() {
+    abstract fun initialize()
     abstract fun show()
 }
 
