@@ -2,19 +2,29 @@ abstract class View() {
     abstract fun show()
 }
 
-class RowView(val views: View...) : View() {
+abstract class LayoutView() : View() {
+    abstract fun add()
+}
+
+class RowView(val views: View...) : LayoutView() {
     override fun show() {
         views.foreach { view ->
             this.add(view)
         }
     }
+    override fun add(val view: View) {
+        views.add(view)
+    }
 }
 
-class ColumnView(val views: View...) : View() {
+class ColumnView(val views: View...) : LayoutView() {
     override fun show() {
         views.foreach { view ->
             this.add(view)
         }
+    }
+    override fun add(val view: View) {
+        views.add(view)
     }
 }
 
