@@ -2,7 +2,7 @@ from core.Database import Database
 from core.View import View, RowView, TextView, ImageView, Image
 
 
-class MinimalTwitterView(val database: Database) : View() {
+class MinimalSocialMediaView(val database: Database) : View() {
     private var postsView : View
     
     override fun show() {
